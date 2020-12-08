@@ -1,20 +1,32 @@
 # Xmas-Lights-Control-Centre
 
+Christmas lights can be set up on a Tasmota based device and controlled indivually from a web page on a per device based. This involved use a menu based system to set timers or console based rules. However, when you get to say five or more then it becomes difficult to manage which is what inspired me to write a system with a single web page to control all devices as a single entity.  
+
 This is a system which controls Tasmota based smart lights, sonoffs, Witty Cloud etc through a single web page. The app sits on a Raspberry Pi on the same LAN as all the sensors which it controls. The app reads the status of the tasmota devices and permits them to be switched on and off from a web page.
 
 This is a very low cost simple installation which requires a minimal equipment set, basically a Raspberry Pi and sonoff devices. No external gateways, sensor or add ons are required.  
 
+Assumptions
+That you 
+        - have a Raspberry Pi and you can install on it the latest Jessie image.( Hint, see https://www.raspberrypi.org/documentation/installation/installing-images/)
+        - know how to navigate Linux on your Raspberry pi to make file permission changes.
+        - have various Tasmota based lights or switches with lights, and that you know how to flash the devices with Tasmota firmware. (Hint,see https://github.com/tasmota/tasmotizer)   
+
 1. Architecture
+
 1.1. Raspberry Pi
   Apache with cgi-bin installed to permit bash shell scripts to be executed from a web page.
+
 1.2. Tasmota Devices
   A range of Tasmota devices were used with different operating systems including 
   Sonoff switches running Sonoff-Tasmota 6.7.1 by Theo Arends
   Witty Cloud running Tasmota 8.5.1 by Theo Arends
+ 
  1.3. Software
    Bash Script - This is included within the Raspian jessie image.
    BootStrap CDN - no installation required
    Javascript CDN - no installation required
+ 
  2. Installation
  
  2.1. Install Apache2 and cgi on the Raspberry Pi. 
