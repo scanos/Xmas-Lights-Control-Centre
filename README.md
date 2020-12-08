@@ -1,5 +1,9 @@
 # Xmas-Lights-Control-Centre
+
 This is a system which controls Tasmota based smart lights, sonoffs, Witty Cloud etc through a single web page. The app sits on a Raspberry Pi on the same LAN as all the sensors which it controls. The app reads the status of the tasmota devices and permits them to be switched on and off from a web page.
+
+This is a very low cost simple installation which requires a minimal equipment set, basically a Raspberry Pi and sonoff devices. No external gateways, sensor or add ons are required.  
+
 1. Architecture
 1.1. Raspberry Pi
   Apache with cgi-bin installed to permit bash shell scripts to be executed from a web page.
@@ -19,13 +23,16 @@ This is a system which controls Tasmota based smart lights, sonoffs, Witty Cloud
   sudo ln -sT ../mods-available/cgi.load cgi.load
   (Note that the root directory for cgi-bin is /usr/lib/cgi-bin and scripts must be owned and executable by the apache2 daemon owner , usually www-data.
 
-  2.2. Install scripts and html files in /usr/lib/cgi-bin
- -rwxr-xr-x 1 www-data www-data  1248 Dec  8 14:58 xmas_lights.html
+  2.2. Install bash scripts and html files
+  
+  Clone the repository and move the files to /usr/lib/cgi-bin. Set the permissions as shown below:
+  
+-rwxr-xr-x 1 www-data www-data  1248 Dec  8 14:58 xmas_lights.html
 -rwxr-xr-x 1 www-data www-data  2905 Dec  8 15:15 xmas_lights.sh
 -rwxr-xr-x 1 www-data www-data   147 Dec  8 14:54 xmas_lights1.html
 -rwxr-xr-x 1 www-data www-data   819 Dec  8 14:48 xmas_lights_change.sh
 
-Find the ip addresses and description of your Tasmota devices (You can find this from 
+Find the ip addresses and description of your Tasmota devices (You can find this from your router page) and replace the following line in xmas_lights.sh with your specific details. Note the format is (description1 ipaddress1 description2 ipaddress2 .....etc)
   lights_array=(kitchen_ceiling_lights 192.168.1.237 bedroom_lights 192.168.1.241 hall_lights 192.168.1.242 hall_ceiling_lights 192.168.1.65 kitchen_lights 192.168.1.233)
 
 
