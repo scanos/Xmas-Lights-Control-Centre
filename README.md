@@ -37,19 +37,25 @@ That you
 
   2.2. Install bash scripts and html files
   
-  Clone the repository and move the files to /usr/lib/cgi-bin. Set the permissions as shown below:
+  The first step is to install jq which parses json data from the Tasmota devices
+  sudo apt-get install jq
+
+  Next, clone this repository using git (sudo apt-get install git-core ,if not already installed) 
+  sudo git clone https://github.com/scanos/Xmas-Lights-Control-Centre.git
+  Next, move the files to /usr/lib/cgi-bin. Set the permissions as shown below:
   
+pi@pi92c5:/usr/lib/cgi-bin $ ls -l xm*
 -rwxr-xr-x 1 www-data www-data 1248 Dec  8 14:58 xmas_lights.html
 -rwxr-xr-x 1 www-data www-data 2162 Dec  9 11:29 xmas_lights.sh
 -rwxr-xr-x 1 www-data www-data  147 Dec  8 14:54 xmas_lights1.html
--rwxr-xr-x 1 www-data www-data  156 Dec  9 11:21 xmas_lights_array.sh
+-rwxr-xr-x 1 www-data www-data  154 Dec  9 11:23 xmas_lights_array
 -rwxr-xr-x 1 www-data www-data  703 Dec  8 21:19 xmas_lights_change.sh
 -rwxr-xr-x 1 www-data www-data 1137 Dec  9 11:26 xmas_lights_toggle.sh
 
-
-Find the ip addresses and description of your Tasmota devices (You can find this from your router page) and replace the following line in xmas_lights.sh with your specific details. Note the format is (description1 ipaddress1 description2 ipaddress2 .....etc)
+Find the ip addresses and description of your Tasmota devices (You can find this from your router page) and replace the following line in xmas_lights_array with your specific details. Use nano to edit the file. sudo nano xmas_lights_array. Note the format is (description1 ipaddress1 description2 ipaddress2 .....etc) i.e. a space between each entry , also avoid spaces in the descriptor fields
   lights_array=(kitchen_ceiling_lights 192.168.1.237 bedroom_lights 192.168.1.241 hall_lights 192.168.1.242 hall_ceiling_lights 192.168.1.65 kitchen_lights 192.168.1.233)
-
+After this, you should be able to access the application from a web browser. For example, the host name of my Raspberry Pi is http://pi92c5/cgi-bin/xmas_lights.sh
+You should replace pi92c5 with the host name or IP address of your Raspberry Pi.
 
 
 
