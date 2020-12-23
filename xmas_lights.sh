@@ -75,6 +75,12 @@ echo "<p><form action='xmas_lights_toggle.sh' method='POST'>"
 echo "<input type='hidden' name='toggle' value='1'>"
 echo "<input type='submit' value='Toggle All Lights'></form>"
 
+
+
+echo "<p><a href=xmas_lights_nmap.sh>Turn off all lights</a>"
+
+
+
 echo "</body></html>"
 
 

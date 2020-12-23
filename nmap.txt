@@ -1,0 +1,37 @@
+
+Starting Nmap 7.40 ( https://nmap.org ) at 2020-12-23 21:36 GMT
+Nmap scan report for sonoff-5225 (192.168.1.64)
+Host is up (0.0051s latency).
+Nmap scan report for Sonoff_smartlight_hallceiling (192.168.1.65)
+Host is up (0.16s latency).
+Nmap scan report for android-37fa6462ef4c3b6a (192.168.1.66)
+Host is up (0.21s latency).
+Nmap scan report for sonoff_12345-2120 (192.168.1.67)
+Host is up (0.029s latency).
+Nmap scan report for HUAWEI_Y7_2018-eaeda739c1 (192.168.1.158)
+Host is up (0.041s latency).
+Nmap scan report for pi92c5 (192.168.1.194)
+Host is up (0.010s latency).
+Nmap scan report for Google-Home-Mini (192.168.1.204)
+Host is up (0.0074s latency).
+Nmap scan report for kali (192.168.1.214)
+Host is up (0.0055s latency).
+Nmap scan report for HITACHI-TV (192.168.1.217)
+Host is up (0.0048s latency).
+Nmap scan report for Tasmota_smartlight_livingroom4 (192.168.1.232)
+Host is up (0.21s latency).
+Nmap scan report for Sonoff_smartlight_kitchenceilin (192.168.1.237)
+Host is up (0.0072s latency).
+Nmap scan report for Tasmota_smartlight_bedroom (192.168.1.241)
+Host is up (0.0050s latency).
+Nmap scan report for Tasmota_smartlight_hall (192.168.1.242)
+Host is up (0.16s latency).
+Nmap scan report for Tasmota_smartlight_livingroom1 (192.168.1.244)
+Host is up (0.010s latency).
+Nmap scan report for Sonoff_smartlight_livingroom2 (192.168.1.245)
+Host is up (0.16s latency).
+Nmap scan report for tasmota_smartlight_livingroom_3 (192.168.1.246)
+Host is up (0.30s latency).
+Nmap scan report for bthub (192.168.1.254)
+Host is up (0.018s latency).
+Nmap done: 256 IP addresses (17 hosts up) scanned in 20.54 seconds
