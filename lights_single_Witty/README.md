@@ -4,3 +4,4 @@ for powering devices which draw more current, you should connect the Witty pin o
 
 Also to configure the witty Cloud for multiple switches you need to configure respective pins with PWM types . You may need to run the command SetOption68 1
 See https://tasmota.github.io/docs/Lights for more information
+Also see https://www.w3schools.com/howto/howto_css_switch.asp for setting up ccs switches
