@@ -13,7 +13,7 @@ lights_array=($lights_array)
 #cat lights_array
 
 echo "<div class='container'><div class='jumbotron'><h1>Smart Light Control System</h1>      
-    <p>A simple low cost system which permits all your LEDS to be controlled from a single web page</p>
+<p>A simple low cost system which permits all your LEDS to be controlled from a single web page Version 1</p>
 </div>"
 
 echo "<table>"
@@ -28,40 +28,28 @@ SUB="${3}:OFF"
 
 if [[ "$test_status" == *"$SUB"* ]];
 then
-  #test_status="OFF"
-
-
-           #if [ $test_status -gt 0 ]
-           #     then
-
-echo "<tr><td><a href=http://${1}>$2</a></td><td>"
-
-
-
-		echo "<tr><td><a href=http://${1}>$2</a></td><td>"
-		testoutput=$(cat lights1.html)
-		testoutput=${testoutput/ipaddress/$1}
-		testoutput=${testoutput/description/$2}
-		testoutput=${testoutput/channnel/$3}
-		testoutput=${testoutput/state/OFF}
-		echo $testoutput
-
-echo "</td></tr>"
-                else 
-echo "<tr><td><a href=http://${1}>$2</a></td><td>"
+	echo "<tr><td><a href=http://${1}>$2</a></td><td>"
+	testoutput=$(cat lights1.html)
+	testoutput=${testoutput/ipaddress/$1}
+	testoutput=${testoutput/description/$2}
+	testoutput=${testoutput/channnel/$3}
+	testoutput=${testoutput/state/OFF}
+	echo $testoutput
+	echo "</td></tr>"
+else 
+	echo "<tr><td><a href=http://${1}>$2</a></td><td>"
                #doesn't display button if no connection made to the host
-		if [[ ${#test_status} -ge 1 ]]; then
+	if [[ ${#test_status} -ge 1 ]]; then
 		testoutput=$(cat lights1.html)
 		testoutput=${testoutput/ipaddress/$1}
 		testoutput=${testoutput/description/$2}
 		testoutput=${testoutput/channnel/$3}
 		testoutput=${testoutput/state/ON}
 		testoutput=${testoutput/ox\"/ox\" checked }
-		fi
-echo $testoutput
-echo "</td></tr>"
- 
-           fi
+	fi
+	echo $testoutput
+	echo "</td></tr>"
+fi
            }
 
 
@@ -80,11 +68,6 @@ done
 
 echo "</table>"
 
-echo "<p><form action='lights_toggle.sh' method='POST'>"
-echo "<input type='hidden' name='toggle' value='1'>"
-echo "<input type='submit' value='Toggle All Lights'></form>"
-echo "<p><a href=xmas_lights_nmap.sh>Turn off all lights</a>"
-echo "</body></html>"
 
 
 
