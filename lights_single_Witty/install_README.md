@@ -34,16 +34,20 @@ pi@pi92c5:/usr/lib/cgi-bin/light
 -rwxr-xr-x 1 www-data www-data 1063 Feb 14 13:42 lights_change.sh
 -rwxr-xr-x 1 www-data www-data  966 Feb 13 12:30 lights_toggle.sh
 
-Find the ip addresses and description of your Tasmota devices (You can find this from your router page) and replace the following line 
-in lights_array with your specific details. Use nano to edit the file......sudo nano lights_array. 
+
+
+2.3. Configure the Witty Cloud
+Find the ip addresses and description of your Tasmota devices (You can find this from your router page) 
+![Configuring Witty](https://github.com/scanos/Xmas-Lights-Control-Centre/blob/main/witty_config.png)
+After you've set up the switches replace the following line in lights_array with your specific details. Use nano to edit the file......sudo nano lights_array. 
 Note the format is - description1 ipaddress1 POWERNUM with a space between each entry, 
 also avoid spaces in the descriptor fields e.g.bell_tower 192.168.1.239 POWER5 small_tower 192.168.1.239 POWER6
 
-2.3. Configure the Witty Cloud
-![Configuring Witty](https://github.com/scanos/Xmas-Lights-Control-Centre/blob/main/witty_config.png)
+Next connect your LEDs to respective pins, by connecting the + wire of the LED to the respective pin on the Wirry e.g. GPIO5 is POWER4, and the - wire of the LED 
+to thr ground pin of the Witty. You may need to use a breadboard as an intermediary to connect the - cables. Note that when you toggle POWER4 from the main Witty page it will
+illuminate the LED connected to GPIO5.
 
-
-
+Again, for higher voltage / current devices you will need to connect the witty pins to a transistor switch. 
 
 After this, you should be able to access the application from a web browser. For example, the host name of my Raspberry Pi is http://pi92c5/cgi-bin/lights/lights.sh 
 You should replace pi92c5 with the host name or IP address of your Raspberry Pi.
