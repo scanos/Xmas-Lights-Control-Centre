@@ -12,9 +12,9 @@ lights_array=$(cat lights_array)
 lights_array=($lights_array)
 #cat lights_array
 
-echo "<div class='container'><div class='jumbotron'><h1>Smart Light Control System</h1>      
-<p>A simple low cost system which permits all your LEDS to be controlled from a single web page Version 1</p>
-</div>"
+#echo "<div class='container'><div class='jumbotron'><h1>Smart Light Control System</h1>      
+#<p>A simple low cost system which permits all your LEDS to be controlled from a single web page Version 1</p>
+#</div>"
 
 echo "<table>"
 

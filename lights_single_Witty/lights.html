@@ -15,13 +15,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
 <script>
-function function1(ipaddress,description,state,channnel) {
+function function1(ipaddress,description,state,channnel,xtimer) {
 
-  alert("You are going to toggle "+channnel+" the "+description);
-  location.replace("lights_change.sh?toggle="+ipaddress+"&canel="+channnel);
+var xtimer = document.getElementById('quantity').value;
+  alert("You are going to toggle "+channnel+" "+description+" in "+xtimer+" seconds");
+  location.replace("lights_change.sh?toggle="+ipaddress+"&canel="+channnel+"&xtimer="+xtimer);
 
 }
-
 
 
 </script>
@@ -68,4 +68,14 @@ input:checked+.slider {
   background-color: #2196F3;
 }
 </style>
+<body>
+<div class='container'><div class='jumbotron'><h1>Smart Light Control System</h1>
+<p> The purpose of this video is to show how you can use Linux to control ESP wifi devices running Tasmota </p> 
+<p>Control your LEDS from a web page. This uses bash scripts,CCS,HTML,Js using an Apache web server on a RPi to control LEDS etc 
+on one or more ESP8266 Witty Cloud (ESP-12F WiFi Module). It also includes the option of a time delay function.</p>
+</div>
+
+<form id="addItemToCart" name="addItemToCart">
+Time Delay before activating <div align="left">Seconds : <input type="text" id="quantity" name="quantity" value="0" size="1"></div>
+</form>
 
