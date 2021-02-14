@@ -40,7 +40,7 @@ Note the format is - description1 ipaddress1 POWERNUM with a space between each 
 also avoid spaces in the descriptor fields e.g.bell_tower 192.168.1.239 POWER5 small_tower 192.168.1.239 POWER6
 
 2.3. Configure the Witty Cloud
-![Configuring Witty](witty_config.png)
+![Configuring Witty](https://github.com/scanos/Xmas-Lights-Control-Centre/blob/main/witty_config.png)
 
 
 
